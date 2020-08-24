@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+/* begin additions */
+body {
+  background-image: url(./images/minimal2.jpg);
+}
+
+.child {
+  flex: 0 1 150px;
+  width: 25%;
+  height: 25%;
+  padding: 10px;
+}
+.collaborator {
+  border: 1px solid black;
+  margin: 0.25em;
+  padding: 0.1em;
+}
+.hr {
+  height: 1px;
+  background-color: rgb(87, 87, 87);
+  width: 100%;
+  margin: 10px;
+}
+.item-image{
+  height: 100%;
+}
+.item-text {
+  background-color: #02348500;
+  color: rgb(0, 0, 0);
+}
+.main-container {
+  margin-right: 25%;
+  margin-left: 25%;
+}
+.parent {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
