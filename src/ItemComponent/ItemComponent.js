@@ -16,14 +16,13 @@ class ItemComponent extends Component {
     return (
       <div className="parent">
         <div className="child item-image">
-          <img src={require('../logo.svg')}></img>
+          <img src={require("../logo.svg")}></img>
+          {this.props.resourceCode}
         </div>
-        <div className="child item-text">
+        <div className="child-text item-text">
           <h3>{this.props.title}</h3>
           {this.props.itemText}
         </div>
-        <div className="child">I am another childs</div>
-        <div className="child">Yabba dabba doo, fads;foiajs;foaij</div>
       </div>
     );
   }

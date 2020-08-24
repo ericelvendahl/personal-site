@@ -39,7 +39,8 @@
 
 /* begin additions */
 body {
-  background-image: url(./images/minimal2.jpg);
+  background-image: url(./images/minimal2-lighter.jpg);
+  background-attachment: fixed;
 }
 
 .child {
@@ -48,6 +49,14 @@ body {
   height: 25%;
   padding: 10px;
 }
+
+.child-text {
+  flex: 0 1 350px;
+  width: 50%;
+  height: 25%;
+  padding: 10px;
+}
+
 .collaborator {
   border: 1px solid black;
   margin: 0.25em;
@@ -59,7 +68,12 @@ body {
   width: 100%;
   margin: 10px;
 }
-.item-image{
+.image-small {
+  height: 200px;
+  margin: 20px;
+  border: solid 2px black;
+}
+.item-image {
   height: 100%;
 }
 .item-text {
