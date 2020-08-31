@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import myImage from "../images/minimal.jpg";
+import ReactPlayer from "react-player/lazy";
+
 
 class ItemComponent extends Component {
   componentDidMount() {}
@@ -16,7 +18,14 @@ class ItemComponent extends Component {
     return (
       <div className="parent">
         <div className="child item-image">
-          <img src={require("../logo.svg")}></img>
+          <img src={require(this.props.imagePath)}></img>
+    
+          <div className="player-wrapper">
+            <ReactPlayer
+              width="100%"
+              url={this.props.resourceCode}
+            ></ReactPlayer>
+          </div>
           {this.props.resourceCode}
         </div>
         <div className="child-text item-text">
