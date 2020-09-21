@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import ItemComponent from "./ItemComponent/ItemComponent";
+import TestComponent from "./TestComponent/TestComponent";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <div className="hr"></div>
         <h2>Education</h2>
         <div className="hr"></div>
+        <TestComponent />
         <ItemComponent
           imagePath="../images/prime.png"
           title="Prime Digital Academy, Full Stack Engineering"
