@@ -18,7 +18,7 @@ class ItemComponent extends Component {
     return (
       <div className="parent">
         <div className="child item-image">
-          <img src={require(this.props.imagePath)}></img>
+          {/* <img src={require(this.props.imagePath)}></img> */}
     
           <div className="player-wrapper">
             <ReactPlayer

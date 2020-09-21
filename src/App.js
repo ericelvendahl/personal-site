@@ -24,7 +24,7 @@ function App() {
           itemText="Technologies and languages covered include React, Redux, Javascript, Node/NPM, Python, jQuery, Axios, Express, postgresql, pg, authorization/authentication, and REST/web APIs. My solo project was a secure, real-time, multi-user task list app built with React, Redux, Redux-saga, and Express."
         />
         <div className="hr"></div>
-        <ItemComponent
+        {/* <ItemComponent
           imagePath="../images/prime.png"
           title="A.A.S. in Computer Science"
           itemText="Primary languages studied were C++, Visual Basic, HTML/CSS, Javascript and Java. My final project was a digital audio delay/echo plugin developed for Jeskola Buzz in C++. It is now included in the official release of the program."
@@ -57,7 +57,7 @@ function App() {
           imagePath="../images/prime.png"
           title="Composer and Associate Producer for 'XJW - Coming Out of the Jehovahs Witnesses'"
           itemText="Responsible for composing and recording original music and collaborating with contributors from three continents."
-        />
+        /> */}
         <div className="hr"></div>
         <p>Contact: ericelvendahl@gmail.com github.com/ericelvendahl</p>
       </div>

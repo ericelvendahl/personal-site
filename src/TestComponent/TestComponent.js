@@ -1,40 +1,39 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import myImage from "../images/minimal.jpg";
 import ReactPlayer from "react-player/lazy";
 
+const TestComponent = (props) => {
 
-class TestComponent extends Component {
-  componentDidMount() {}
+  // const handleInputChangeFor = (propertyName) => (event) => {
+  //   this.setState({
+  //     [propertyName]: event.target.value,
+  //   });
+  // }; // end handleInputChangeFor
+  const [myString, setMyString] = useState("default string");
+  
+  // Replacement for componentDidMount()
+  useEffect(() => {
+    fetch('url')
+    .then(res => res.json())
+    .then(items => setMyString(''))
+    .catch((err) => {
+      console.log(err)
+    })
+  }, [])
+  
+  // Replacement for componentDidUpdate()
+  
 
-  state = {};
-
-  handleInputChangeFor = (propertyName) => (event) => {
-    this.setState({
-      [propertyName]: event.target.value,
-    });
-  }; // end handleInputChangeFor
-
-  render() {
-    return (
-      <div className="parent">
-        <div className="child item-image">
-          <img src={require(this.props.imagePath)}></img>
-    
-          <div className="player-wrapper">
-            <ReactPlayer
-              width="100%"
-              url={this.props.resourceCode}
-            ></ReactPlayer>
-          </div>
-          {this.props.resourceCode}
-        </div>
-        <div className="child-text item-text">
-          <h3>{this.props.title}</h3>
-          {this.props.itemText}
+  return (
+    <div className="parent">
+      <div className="child item-image">
+        {JSON.stringify(myString)}
+        <div className="player-wrapper">
+          <ReactPlayer width="100%" url="https://www.youtube.com/watch?v=d8CGWZ8DNgs"></ReactPlayer>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default TestComponent;
