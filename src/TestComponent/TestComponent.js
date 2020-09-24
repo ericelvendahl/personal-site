@@ -9,7 +9,13 @@ const TestComponent = (props) => {
   //     [propertyName]: event.target.value,
   //   });
   // }; // end handleInputChangeFor
-  const [myString, setMyString] = useState("default string");
+
+  const [myString, setMyString] = useState('');
+
+  const handleInputChange = (e) => setMyString({
+    ...myString,
+    [e.currentTarget.name]: e.currentTarget.value
+  })
   
   // Replacement for componentDidMount()
   useEffect(() => {
@@ -28,6 +34,7 @@ const TestComponent = (props) => {
     <div className="parent">
       <div className="child item-image">
         {JSON.stringify(myString)}
+        <input type="text" name="stringInput" onChange={handleInputChange}/>
         <div className="player-wrapper">
           <ReactPlayer width="100%" url="https://www.youtube.com/watch?v=d8CGWZ8DNgs"></ReactPlayer>
         </div>
